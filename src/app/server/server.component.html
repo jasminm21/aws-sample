@@ -1,0 +1,27 @@
+<p 
+[ngStyle]="{backgroundColor : getColor()}" 
+[ngClass]="{online : serverStatus === 'online'}"
+>
+{{serverStatus}}
+</p> <br>
+
+<p *ngFor="let s of servers; index as i">
+    {{i+1}} {{s}}
+</p>
+
+<hr>
+<button class="btn btn-info" (click)="toggleMe()">Display Details</button>
+
+<p *ngIf="!toggleBtn">Hi Im jasmin</p>
+<p *ngIf="toggleBtn">Hello I m Taisim</p>
+
+
+
+<div  *ngFor="let b of btnArr; let i=index"
+[ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text' : i >= 4}"
+>
+
+{{b}}
+
+</div> <br>
